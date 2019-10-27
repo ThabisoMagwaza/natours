@@ -1,0 +1,17 @@
+// Global site settings
+
+/* browser resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* browser 16px therefore roof font-size = 10px = 1rem*/
+  font-size: 62.5%;
+}
+
+body {
+  padding: 3rem;
+}

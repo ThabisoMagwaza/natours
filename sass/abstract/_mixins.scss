@@ -1,0 +1,29 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: grid;
+    clear: both;
+  }
+}
+
+@mixin image-gradient-background($image-src) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url($image-src);
+  background-size: cover;
+  background-position: top;
+}
+
+@mixin text-gradient-background {
+  background-image: linear-gradient(
+    to right,
+    rgba($color-primary-light, 1),
+    rgba($color-primary-dark, 1)
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
