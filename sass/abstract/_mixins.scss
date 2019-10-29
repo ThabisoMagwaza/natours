@@ -27,3 +27,64 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+//  LINEAR GRADIENT
+@mixin lienar-gradient-img-secondary($opacity, $url) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-secondary-light, $opacity),
+      rgba($color-secondary-dark, $opacity)
+    ),
+    url($url);
+}
+
+@mixin lienar-gradient-img-primary($opacity, $url) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, $opacity),
+      rgba($color-primary-dark, $opacity)
+    ),
+    url($url);
+}
+
+@mixin lienar-gradient-img-tertiary($opacity, $url) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-tertiary-light, $opacity),
+      rgba($color-tertiary-dark, $opacity)
+    ),
+    url($url);
+}
+
+@mixin lienar-gradient-img-tertiary($opacity, $url) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-tertiary-light, $opacity),
+      rgba($color-tertiary-dark, $opacity)
+    ),
+    url($url);
+}
+
+@mixin lienar-gradient-tertiary($opacity) {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-tertiary-light, $opacity),
+    rgba($color-tertiary-dark, $opacity)
+  );
+}
+
+@mixin lienar-gradient-primary($opacity) {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, $opacity),
+    rgba($color-primary-dark, $opacity)
+  );
+}
+
+@mixin lienar-gradient-secondary($opacity) {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-secondary-light, $opacity),
+    rgba($color-secondary-dark, $opacity)
+  );
+}
