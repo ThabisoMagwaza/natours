@@ -1,3 +1,4 @@
+.btn,
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -5,10 +6,15 @@
   display: inline-block;
   padding: 2.5rem;
   border-radius: 10rem;
+  padding: 1.5rem 4rem;
 
   transition: all 0.2s;
 
   position: relative;
+
+  // change for <button> element
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -16,7 +22,8 @@
   box-shadow: 0 1rem 2rem #0000003a;
 }
 
-.btn:active {
+.btn:active,
+.btn:focus {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem #0000003a;
 }

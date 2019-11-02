@@ -1,0 +1,105 @@
+.form {
+  width: 50%;
+  padding-top: 6rem;
+  padding-left: 5rem;
+
+  &__group {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__label {
+    padding-left: 2.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    font-weight: 700;
+    display: block;
+
+    transition: all 0.3s;
+  }
+
+  &__input {
+    width: 80%;
+    padding: 2rem 2.5rem;
+    display: block;
+    font-size: $fontsize-default;
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+    border-bottom: 3px solid transparent;
+
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-primary;
+      box-shadow: 0 1rem 6rem rgba($color-black, 0.1);
+
+      &:invalid {
+        border-bottom: 3px solid $color-secondary-dark;
+      }
+    }
+
+    &::-webkit-input-placeholder {
+      color: $text-dark-2;
+    }
+  }
+
+  &__radio-input {
+    visibility: hidden;
+  }
+
+  &__radio-input:checked + &__radio-label &__radio-circle {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &__radio-label {
+    font-size: 1.7rem;
+    font-family: inherit;
+    color: $text-dark-2;
+    display: inline-block;
+    margin-right: 5rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  &__radio-circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 3px solid $color-primary;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: -2rem;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      border-radius: 50%;
+      opacity: 0;
+
+      transition: all 0.3s;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    transform: translateY(-7rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
