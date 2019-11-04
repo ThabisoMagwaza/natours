@@ -194,6 +194,105 @@ body {
     width: 80%;
     float: right; }
 
+.navigation__button {
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+  z-index: 2000; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__icon {
+  border-bottom: 2px solid #000000;
+  display: inline-block;
+  width: 45%;
+  position: relative;
+  margin-top: 1rem;
+  transition: all 0.3s; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    border-bottom: 2px solid #000000;
+    position: absolute;
+    left: 0; }
+  .navigation__icon::before {
+    top: 1.8rem; }
+  .navigation__icon::after {
+    top: 3.6rem; }
+
+.navigation__background {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  transition: all 0.3s ease-in;
+  z-index: 1000; }
+
+.navigation__nav {
+  opacity: 0;
+  width: 0;
+  transition: all 0.3s ease-in; }
+
+.navigation__list {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  z-index: 1500; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  display: inline-block;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 230%; }
+  .navigation__link:link span, .navigation__link:visited span {
+    margin-right: 1.5rem; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #55c57a;
+  transform: translateX(1rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon {
+  border-bottom: 2px solid transparent; }
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
+  top: 2.5rem;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
+  top: 2.5rem;
+  transform: rotate(-135deg); }
+
 .btn,
 .btn:link,
 .btn:visited {
